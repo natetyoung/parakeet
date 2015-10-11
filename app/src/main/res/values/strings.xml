@@ -1,4 +1,37 @@
 <resources>
     <string name="app_name">Parakeet</string>
     <string name="action_settings">Settings</string>
+
+    <string name="title_activity_play">PlayActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <string name="title_activity_scores">ScoresActivity</string>
+
+    <string name="title_activity_help">HelpActivity</string>
+
+    <string name="title">Let It Rip</string>
+
+    <string name="play">Play</string>
+    <string name="help">Help</string>
+    <string name="scores">Scores</string>
+
+    <string name="instructions1">1. Align the notes on the DJ disk with the notes in the list on the left.</string>
+    <string name="instructions2">a. You are able to do this by sliding the DJ disk.</string>
+    <string name="instructions3">2. After step one, tap on the screen to play the notes that you aligned.</string>
+    <string name="instructions4">a. Make sure to do this within the time allotted. The timer will be underneath the notes that you have to match. </string>
+    <string name="instructions5">3. You will get a higher score depending on how well you follow the tempo of the song. Enjoy!</string>
+
+    <string name="score1">1.</string>
+    <string name="score2">2.</string>
+    <string name="score3">3.</string>
+    <string name="score4">4.</string>
+    <string name="score5">5.</string>
+    <string name="score6">6.</string>
+    <string name="score7">7.</string>
+    <string name="score8">8.</string>
+    <string name="score9">9.</string>
+    <string name="score10">10.</string>
+
+    <string name="empty_score">0</string>
 </resources>

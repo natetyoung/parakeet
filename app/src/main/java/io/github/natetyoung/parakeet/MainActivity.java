@@ -1,22 +1,48 @@
 package io.github.natetyoung.parakeet;
 
+import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
-    ParakeetView pv;
+
+    private MediaPlayer bgm;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        pv = new ParakeetView(this);
-        pv.resume();
+        bgm = MediaPlayer.create(this, R.raw.ancient_evil);
+
+        bgm.start();
+        Button play = (Button) findViewById(R.id.play);
+        play.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent playInt = new Intent(MainActivity.this, PlayActivity.class);
+                startActivity(playInt);
+            }
+        });
+
+        Button help = (Button) findViewById(R.id.help);
+        help.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent helpInt = new Intent(MainActivity.this, HelpActivity.class);
+                startActivity(helpInt);
+            }
+        });
+
+        Button scores = (Button) findViewById(R.id.scores);
+        scores.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent scoresInt = new Intent(MainActivity.this, ScoresActivity.class);
+                startActivity(scoresInt);
+            }
+        });
     }
 
     @Override
@@ -39,5 +65,17 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void onPause()
+    {
+        super.onPause();
+        bgm.pause();
+    }
+
+    public void onResume()
+    {
+        super.onResume();
+        bgm.start();
     }
 }

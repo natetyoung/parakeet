@@ -9,10 +9,81 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:showIn="@layout/activity_main" tools:context=".MainActivity">
 
-    <io.github.natetyoung.parakeet.ParakeetView
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/view"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/title"
+        android:id="@+id/title"
+        android:layout_marginTop="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="77.7dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/play"
+        android:id="@+id/play"
+        android:layout_marginTop="50dp"
+        android:layout_below="@+id/title"
+        android:layout_alignLeft="@+id/scores"
+        android:layout_alignStart="@+id/scores" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/scores"
+        android:id="@+id/scores"
         android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:layout_below="@+id/play" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/help"
+        android:id="@+id/help"
+        android:layout_below="@+id/scores"
+        android:layout_alignLeft="@+id/scores"
+        android:layout_alignStart="@+id/scores"
+        android:layout_marginTop="50dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/treble_clef"
+        android:src="@drawable/treble_clef"
+        android:layout_toRightOf="@+id/play"
+        android:layout_toEndOf="@+id/play"
+        android:layout_alignTop="@+id/play"
+        android:layout_alignBottom="@+id/help" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bass_clef"
+        android:src="@drawable/bass_clef"
+        android:layout_toLeftOf="@+id/play"
+        android:layout_below="@+id/play"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="false"
+        android:layout_alignParentTop="false"
+        android:layout_alignWithParentIfMissing="false"
+        android:layout_above="@+id/help" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/music_score"
+        android:src="@drawable/music_score"
+        android:layout_below="@+id/help"
+        android:layout_alignEnd="@+id/treble_clef"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="false"
+        android:layout_marginTop="50dp" />
+
 </RelativeLayout>
